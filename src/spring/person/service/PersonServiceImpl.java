@@ -1,9 +1,12 @@
 package spring.person.service;
 
+import java.util.Map;
+
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import spring.person.dao.PersonDao;
@@ -20,6 +23,13 @@ public class PersonServiceImpl implements PersonService {
 	@Resource(name="personDaoImpl")
 	private PersonDao personDao = new PersonDaoImpl();
 
+	@Value("${message}")
+	private String message;
+	
+	// Mapped resource from the commonContext
+	@Resource(name="myTestMap")
+	private Map<String,Integer> map;
+	
 	@Override
 	public Person find(Integer id) {
 		System.out.println("Finding person with id=" + id);
@@ -28,8 +38,12 @@ public class PersonServiceImpl implements PersonService {
 
 	@Override
 	public void save(Person person) {
-		System.out.println("Finding person " + person);
+		System.out.println("Finding person " + person + " " + message);
 		personDao.save(person);
+	}
+	
+	public void printMap(){
+		System.out.println(map);
 	}
 
 //	public PersonDao getPersonDao() {

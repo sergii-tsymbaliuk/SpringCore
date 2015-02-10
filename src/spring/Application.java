@@ -16,18 +16,20 @@ public class Application {
 	public final static EntityManagerFactory EMF = Persistence.createEntityManagerFactory("jpa");
 	public final static EntityManager EM = EMF.createEntityManager();
 	//With XML
-	//public final static ApplicationContext AC = new ClassPathXmlApplicationContext("appContext.xml");
+	public final static ApplicationContext AC = new ClassPathXmlApplicationContext("appContext.xml");
 	// With Java annotation (see the AppContext.java class)
-	public final static ApplicationContext AC = new AnnotationConfigApplicationContext(AppContext.class);
+	//public final static ApplicationContext AC = new AnnotationConfigApplicationContext(AppContext.class);
 	public static void main(String[] args) {
 
 		//PersonService personService = new PersonServiceImpl();
 		//PersonService personService = AC.getBean(PersonService.class);
 		//PersonService personService2 = AC.getBean(PersonService.class);
-		PersonService personService = AC.getBean("javaPersonService",PersonService.class);
-		Person p = new Person("John");
-		personService.save(p);
-		
+		//for java PersonService personService = AC.getBean("javaPersonService",PersonService.class);
+		PersonService personService = AC.getBean("personServiceImpl",PersonService.class);
+//		Person p = new Person("John");
+//		personService.save(p);
+		//test map mapping from CommonContext.xml
+		//((PersonServiceImpl)personService).printMap();
 		
 		EM.close();
 		EMF.close();
