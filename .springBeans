@@ -7,8 +7,6 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>src/main/resources/appContext.xml</config>
-		<config>src/main/resources/commonContext.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
