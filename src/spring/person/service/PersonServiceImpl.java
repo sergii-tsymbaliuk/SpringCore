@@ -1,12 +1,15 @@
 package spring.person.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import spring.person.dao.PersonDao;
 import spring.person.dao.PersonDaoImpl;
 import spring.person.model.Person;
 
 public class PersonServiceImpl implements PersonService {
-	
-	PersonDao personDao = new PersonDaoImpl();
+	// 3 Autowired - Spring itself inserts the bean, no need in constructor or setter
+	@Autowired
+	private PersonDao personDao = new PersonDaoImpl();
 
 	@Override
 	public Person find(Integer id) {
@@ -20,18 +23,18 @@ public class PersonServiceImpl implements PersonService {
 		personDao.save(person);
 	}
 
-	public PersonDao getPersonDao() {
-		return personDao;
-	}
-
-	public void setPersonDao(PersonDao personDao) {
-		System.out.println("Setter injection");
-		this.personDao = personDao;
-	}
-
-	public PersonServiceImpl(PersonDao personDao) {
-		super();
-		System.out.println("Condtructor injections");
-		this.personDao = personDao;
-	}
+//	public PersonDao getPersonDao() {
+//		return personDao;
+//	}
+//
+//	public void setPersonDao(PersonDao personDao) {
+//		System.out.println("Setter injection");
+//		this.personDao = personDao;
+//	}
+//
+//	public PersonServiceImpl(PersonDao personDao) {
+//		super();
+//		System.out.println("Constructor injections");
+//		this.personDao = personDao;
+//	}
 }
