@@ -20,4 +20,18 @@ public class PersonServiceImpl implements PersonService {
 		personDao.save(person);
 	}
 
+	public PersonDao getPersonDao() {
+		return personDao;
+	}
+
+	public void setPersonDao(PersonDao personDao) {
+		System.out.println("Setter injection");
+		this.personDao = personDao;
+	}
+
+	public PersonServiceImpl(PersonDao personDao) {
+		super();
+		System.out.println("Condtructor injections");
+		this.personDao = personDao;
+	}
 }

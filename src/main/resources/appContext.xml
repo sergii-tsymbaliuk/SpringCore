@@ -3,8 +3,19 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!-- 1 - classic beans 
 	<bean id = "personDao" class="spring.person.dao.PersonDaoImpl"> </bean>
 	<bean id = "personService" class="spring.person.service.PersonServiceImpl">
-		<property name="personDao" ref="personDao"></property>
+		<!-- <property name="personDao" ref="personDao"></property> -- >
+		<constructor-arg index="0" ref="personDao"></constructor-arg>
 	</bean>	
+-->	
+<!-- 2 alternative - hidden unnamed bean-->
+<!---->
+	<bean id = "personService" class="spring.person.service.PersonServiceImpl">
+		<constructor>
+			<bean class="spring.person.dao.PersonDaoImpl"> </bean>		
+		</constructor>
+	</bean>	
+ 	
 </beans>
