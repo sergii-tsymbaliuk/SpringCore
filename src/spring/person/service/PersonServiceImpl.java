@@ -1,11 +1,13 @@
 package spring.person.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import spring.person.dao.PersonDao;
 import spring.person.dao.PersonDaoImpl;
 import spring.person.model.Person;
 
+@Service
 public class PersonServiceImpl implements PersonService {
 	// 3 Autowired - Spring itself inserts the bean, no need in constructor or setter
 	@Autowired

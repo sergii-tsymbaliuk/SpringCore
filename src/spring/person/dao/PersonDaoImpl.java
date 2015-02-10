@@ -3,9 +3,13 @@ package spring.person.dao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
 import spring.Application;
 import spring.person.model.Person;
 
+@Repository
 public class PersonDaoImpl implements PersonDao {
 	private EntityManager em =  Application.EM;
 

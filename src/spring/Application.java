@@ -20,7 +20,7 @@ public class Application {
 
 		//PersonService personService = new PersonServiceImpl();
 		PersonService personService = AC.getBean(PersonService.class);
-		PersonService personService2 = AC.getBean(PersonService.class);
+		//PersonService personService2 = AC.getBean(PersonService.class);
 		Person p = new Person("John");
 		personService.save(p);
 		

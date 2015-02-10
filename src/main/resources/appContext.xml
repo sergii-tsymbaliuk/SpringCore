@@ -6,22 +6,24 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 
 <!-- 3 - Turn on Autowire -->
+
 	<context:annotation-config />
-	<context:component-scan base-package="spring.person">
-	<context:exclude-filter type="regex"
-			expression="person.*Test*.*" />
+	<context:component-scan base-package="spring">
+		<context:exclude-filter type="regex" expression="person.*Test*.*" />
 	</context:component-scan>
 
-<!-- 1 - classic beans--> 
+<!-- 1 - classic beans
 	<bean id = "personDao" class="spring.person.dao.PersonDaoImpl"> </bean>
-	<!--  scope -->	
+	<! - -  scope -- >	
 	<bean 	id = "personService"
 			scope="singleton" 
 			class="spring.person.service.PersonServiceImpl">
-		<!-- <property name="personDao" ref="personDao"></property> -->
-		<constructor-arg index="0" ref="personDao"></constructor-arg>
+		<!-- 1a - setter injection -- >
+		<property name="personDao" ref="personDao"></property>			
+		<!-- 1 b Constructor injection -->
+		<!-- >constructor-arg index="0" ref="personDao"></constructor-arg-- >  
 	</bean>	
-	
+--> 
 <!-- 2 alternative - hidden unnamed bean-->
 <!--
 	<bean id = "personService" class="spring.person.service.PersonServiceImpl">
