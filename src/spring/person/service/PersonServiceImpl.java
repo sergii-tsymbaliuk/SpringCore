@@ -1,6 +1,9 @@
 package spring.person.service;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import spring.person.dao.PersonDao;
@@ -10,7 +13,11 @@ import spring.person.model.Person;
 @Service
 public class PersonServiceImpl implements PersonService {
 	// 3 Autowired - Spring itself inserts the bean, no need in constructor or setter
-	@Autowired
+//	@Autowired
+//	@Qualifier("personDaoImpl")
+//
+	// 3.4 Alternative using javax annotation except spring:
+	@Resource(name="personDaoImpl")
 	private PersonDao personDao = new PersonDaoImpl();
 
 	@Override
