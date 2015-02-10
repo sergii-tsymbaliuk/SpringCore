@@ -12,26 +12,4 @@
 		<context:exclude-filter type="regex" expression="person.*Test*.*" />
 	</context:component-scan>
 
-<!-- 1 - classic beans
-	<bean id = "personDao" class="spring.person.dao.PersonDaoImpl"> </bean>
-	<! - -  scope -- >	
-	<bean 	id = "personService"
-			scope="singleton" 
-			class="spring.person.service.PersonServiceImpl">
-		<!-- 1a - setter injection -- >
-		<property name="personDao" ref="personDao"></property>			
-		<!-- 1 b Constructor injection -->
-		<!-- >constructor-arg index="0" ref="personDao"></constructor-arg-- >  
-	</bean>	
---> 
-<!-- 2 alternative - hidden unnamed bean-->
-<!--
-	<bean id = "personService" class="spring.person.service.PersonServiceImpl">
-		<constructor>
-			<bean class="spring.person.dao.PersonDaoImpl"> </bean>		
-		</constructor>
-	</bean>	
---> 	
-
-
 </beans>
