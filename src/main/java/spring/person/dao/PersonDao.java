@@ -2,6 +2,10 @@ package spring.person.dao;
 
 import java.util.List;
 
+
+
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 //import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
@@ -16,4 +20,23 @@ public interface PersonDao extends
 	public List<Person> getByName(String name);	
 	
 	//public List<Person> findByName(String name);
+	
+	
+	// Custom find method using JPQL
+	@Query("from Person p where length(p.name)=?1")
+	public List<Person> findByNameLength(int length);
+	
+	// Custom find method using native SQ:
+	@Query(value="select * from person p where length(p.name)=?1",nativeQuery = true )
+	public List<Person> findByNameLengthSQL(int length);
+	
+	//Custom find methods using method name expressions
+	public List<Person> findByNameLike(String name);
+	public List<Person> findByNameContainsAndNameLikeOrderByNameAsc(String contains,String like);
+	
+	//Using @Modifiyng to update records
+	@Query("update Person p set p.name=:newName where p.name=:name")
+	@Modifying
+	public int setNewName(String name,String newName);
+
 }

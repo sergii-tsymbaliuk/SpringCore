@@ -27,8 +27,19 @@ public class PersonTest extends AbstractTransactionalJUnit4SpringContextTests {
 	@Test
 	public void read(){
 		System.out.println(personDao.getClass());
+		System.out.println("=================================\nfindByName\n==============================");		
 		System.out.println(personDao.findByName("John"));
-		System.out.println(personDao.findOne(1L));		
+		System.out.println("=================================\nfindOne\n==============================");		
+		System.out.println(personDao.findOne(1L));	
+		System.out.println("=================================\nfindByNameLength\n==============================");		
+		System.out.println(personDao.findByNameLength(6));
+		System.out.println("=================================\nfindByNameLengthSQL\n==============================");
+		System.out.println(personDao.findByNameLengthSQL(4));		
+		System.out.println("=================================\nfindByNameLengthSQL\n==============================");
+		System.out.println(personDao.findByNameContainsAndNameLikeOrderByNameAsc("o", "%n%"));
+		System.out.println("=================================\nUpdateQuery\n==============================");
+		System.out.println(personDao.setNewName("Jonny", "Indy"));				
+		
 	}
 
 }
