@@ -26,7 +26,9 @@ public class PersonTest extends AbstractTransactionalJUnit4SpringContextTests {
 	
 	@Test
 	public void read(){
+		System.out.println(personDao.getClass());
 		System.out.println(personDao.findByName("John"));
+		System.out.println(personDao.findOne(1L));		
 	}
 
 }

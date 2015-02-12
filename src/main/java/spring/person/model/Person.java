@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class Person {
 	@Id
 	@GeneratedValue
-	Integer id;
+	Long id;
 	String name;
 	Integer age;
 
@@ -19,16 +19,16 @@ public class Person {
 		this.name = name;
 	}
 
-	public Person(Integer id, String name) {
+	public Person(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
