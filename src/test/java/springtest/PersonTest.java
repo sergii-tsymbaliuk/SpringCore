@@ -5,6 +5,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -38,8 +41,16 @@ public class PersonTest extends AbstractTransactionalJUnit4SpringContextTests {
 		System.out.println("=================================\nfindByNameLengthSQL\n==============================");
 		System.out.println(personDao.findByNameContainsAndNameLikeOrderByNameAsc("o", "%n%"));
 		System.out.println("=================================\nUpdateQuery\n==============================");
-		System.out.println(personDao.setNewName("Jonny", "Indy"));				
+		System.out.println(personDao.setNewName("Johnny", "Indy"));				
 		
+		System.out.println("=================================\n Using Sort\n==============================");
+		System.out.println( personDao.findByNameLike("%ohn", new Sort(Direction.ASC, "age")) );				
+		
+		System.out.println("=================================\n Using Pageaing\n==============================");
+		System.out.println( personDao.findByNameLike("%ohn", new PageRequest(1, 1)));	
+		
+		System.out.println("=================================\n Custom Interface \n==============================");
+		personDao.doSomethingSpecific(personDao.findOne(1L));
 	}
 
 }
