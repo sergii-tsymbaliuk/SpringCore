@@ -18,13 +18,34 @@
 
 	<tx:annotation-driven/>
 	
-		<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-			<property name="entityManagerFactory" ref="entityManagerFactory" />
-		</bean>
-	
-		<bean 	id="entityManagerFactory"
-				class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" />
-				
-	<bean  class = "org.springframework.jdbc.datasource.DriverManagerDataSource"/>					
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
 
+	<bean 	id="entityManagerFactory"
+			class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" >
+			
+		<property name="persistenceUnitName" value="jpa" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+		<property name="jpaPropertyMap">
+			<map>
+				<entry key="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+				<entry key="hibernate.hbm2ddl.auto" value="update" />
+				<entry key="hibernate.show_sql" value="true" />
+				<entry key="hibernate.format_sql" value="true" />
+			</map>
+		</property>
+	</bean>
+	
+	<!-- moved from persistence -->			
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/jpa" />
+		<property name="username" value="root" />
+		<property name="password" value="pass" />
+	</bean>
 </beans>

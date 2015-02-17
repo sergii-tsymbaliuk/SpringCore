@@ -2,10 +2,11 @@
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 			xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>JavaPersistence</groupId>
-	<artifactId>JavaPersistence</artifactId>
+	<groupId>JavaSpringAll</groupId>
+	<artifactId>JavaSpringAll</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>JavaPersistence</name>
+	<name>JavaSpringAll</name>
+	<packaging>war</packaging>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -15,9 +16,10 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-				</configuration>
+				</configuration>	
 			</plugin>
 		</plugins>
+		<finalName>JavaSpringAll</finalName>
 	</build>
 	<dependencies>
 		<dependency>
@@ -49,8 +51,19 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>				
+			<version>LATEST</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>LATEST</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>LATEST</version>
+		</dependency>		
 	</dependencies>
 </project>
