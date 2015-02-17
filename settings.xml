@@ -1,0 +1,9 @@
+<settings>
+  <servers>
+    <server>
+      <id>myserver</id>
+      <username>tomcat</username>
+      <password>tomcat</password>
+    </server>
+  </servers>
+</settings>
