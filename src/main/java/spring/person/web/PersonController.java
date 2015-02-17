@@ -7,10 +7,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class PersonController {
 
-		@RequestMapping("")
-		@ResponseBody
-		
+		@RequestMapping("hello")
 		public String sayHello(){
-			return "Hello Web App!!!";
+			return "hello";
 		}
 }

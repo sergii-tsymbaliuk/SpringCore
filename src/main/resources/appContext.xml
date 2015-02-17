@@ -11,7 +11,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
 		http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository-1.7.xsd">
 
-	<context:property-placeholder location="app.prop"/>
+	<!-- <context:property-placeholder location="app.prop"/>-->
 	<context:annotation-config />
 	<context:component-scan base-package="spring"/>
 	<jpa:repositories base-package="spring"/>	
