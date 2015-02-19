@@ -1,5 +1,7 @@
 package spring.person.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,6 +13,7 @@ public class Person {
 	Long id;
 	String name;
 	Integer age;
+	private Date createDate;
 
 	public Person() {
 	}
@@ -51,6 +54,15 @@ public class Person {
 	@Override
 	public String toString() {
 		return "Person [id=" + id + ", name=" + name + ", age=" + age + "]\n";
+	}
+
+	public void setCreateDate(Date date) {
+		this.createDate= date;
+		
+	}
+
+	public Date getCreateDate() {
+		return createDate;
 	}
 
 }

@@ -8,8 +8,11 @@
 </head>
 <body>
 	<!--  <b>${person}</b>-->
-	<b>id</b>${person.id} <br> 
-	<b>Name</b>${person.name}<br>
-	<b>Age</b>${person.age}	<br>	
+	<b>id : </b>${person.id} <br> 
+	<b>Name : </b>${person.name}<br>
+	<b>Age : </b>${person.age}	<br>
+	<b>Date : </b>${person.createDate}	<br>	
+	<a href="person/edit?id=${person.id}">edit</a>	
+	<a href="person/add">add</a>	
 </body>
 </html>

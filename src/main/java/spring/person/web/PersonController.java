@@ -1,9 +1,11 @@
 package spring.person.web;
 
+import java.util.Date;
 import java.util.Map;
 
 import javax.annotation.Resource;
 //import javax.servlet.http.HttpServletRequest;
+
 
 
 
@@ -35,11 +37,10 @@ public class PersonController {
 //			return "person/view";
 //		}
 //		
-		@RequestMapping("person")
-		public String getPerson(@RequestParam("id") Long id, 
+		@RequestMapping("view")
+		public String getPerson(@RequestParam(value="id",required=false) Long id, 
 					Map<String,Object> model){
 			Person p = service.findOne(id);
-			System.out.println("person="+p);
 			model.put("person",p);
 			return "person/view";
 		}
@@ -49,12 +50,32 @@ public class PersonController {
 			return "person/add";
 		}
 
-
 		@RequestMapping(value="add", method = RequestMethod.POST)
-		public String addPerson(@ModelAttribute Person person){
-			System.out.println("person="+person);
+		public String addPerson(@ModelAttribute("person") Person person){
+			person.setCreateDate(new Date());
 			service.save(person);
-			System.out.println("person="+person);
+			return "redirect:view?id="+person.getId();
+		}
+
+		@RequestMapping(value="edit", method = RequestMethod.GET)
+		public String showEditPersonForm(
+				@RequestParam("id") Long id,
+				Map<String,Object> model ){
+			model.put("person",service.findOne(id));
+			return "person/edit";
+		}			
+		
+		@RequestMapping(value="edit", method = RequestMethod.POST)
+		public String editPerson(
+			@ModelAttribute("person") Person person){
+			
+			service.save(person);
 			return "redirect:person?id="+person.getId();
-		}		
+		}				
+				
+		@ModelAttribute ("person")
+		public Person getPerson(@RequestParam(value="id",required=false) Long id){
+			return id == null ? new Person() : service.findOne(id);
+			
+		}
 }
