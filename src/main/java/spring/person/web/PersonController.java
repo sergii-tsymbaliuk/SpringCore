@@ -1,33 +1,28 @@
 package spring.person.web;
 
-import java.util.Date;
-import java.util.Map;
-
-import javax.annotation.Resource;
-//import javax.servlet.http.HttpServletRequest;
-
-
-
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import spring.person.model.Person;
-import spring.person.service.PersonService;
 
 @Controller
-public class PersonController {
+public class PersonController extends PersonAbstractController {
 
-		@Resource
-		PersonService service;
-		
-	
 		@RequestMapping("person/view")
 		public String showViewForm(){
 			return "person/view";
+		}
+		
+		
+		@RequestMapping("")
+		public String showPersonList(Model model){
+			model.addAttribute("personList", service.findAll());
+			return "person/list";
 		}
 		
 		@RequestMapping(value="person/add", method = RequestMethod.GET)
@@ -48,14 +43,14 @@ public class PersonController {
 		}
 	
 		@RequestMapping(value="person/delete", method = RequestMethod.POST)
-		public String deletePerson( @RequestParam("id") Long id){
-			service.delete(id);
+		public String deletePerson( @RequestParam("id") Person person){ //thanks to data binder !
+			service.delete(person);
 			return "";
 		}
 		
 		@ModelAttribute ("person")
-		public Person getPerson(@RequestParam(value="id",required=false) Long id){
-			return id == null ? new Person() : service.findOne(id);
+		public Person getPerson(@RequestParam(value="id",required=false) Person person){
+			return person == null ? new Person() : person;
 			
 		}
 }

@@ -53,7 +53,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", age=" + age + "]\n";
+		return "Person [id=" + id + ", name=" + name + ", age=" + age + "]<BR>\n";
 	}
 
 	public void setCreateDate(Date date) {
