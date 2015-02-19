@@ -37,42 +37,28 @@ public class PersonController {
 //			return "person/view";
 //		}
 //		
-		@RequestMapping("view")
-		public String getPerson(@RequestParam(value="id",required=false) Long id, 
-					Map<String,Object> model){
-			Person p = service.findOne(id);
-			model.put("person",p);
+		@RequestMapping("person/view")
+		public String showViewForm(){
 			return "person/view";
 		}
 		
-		@RequestMapping(value="add", method = RequestMethod.GET)
+		@RequestMapping(value="person/add", method = RequestMethod.GET)
 		public String showAddform(){
 			return "person/add";
 		}
-
-		@RequestMapping(value="add", method = RequestMethod.POST)
-		public String addPerson(@ModelAttribute("person") Person person){
-			person.setCreateDate(new Date());
-			service.save(person);
-			return "redirect:view?id="+person.getId();
-		}
-
-		@RequestMapping(value="edit", method = RequestMethod.GET)
-		public String showEditPersonForm(
-				@RequestParam("id") Long id,
-				Map<String,Object> model ){
-			model.put("person",service.findOne(id));
-			return "person/edit";
-		}			
 		
-		@RequestMapping(value="edit", method = RequestMethod.POST)
-		public String editPerson(
+		@RequestMapping(value="person/edit", method = RequestMethod.GET)
+		public String showEditPersonForm(){
+			return "person/edit";
+		}					
+
+		@RequestMapping(value={"person/add","person/edit"}, method = RequestMethod.POST)
+		public String savePerson(
 			@ModelAttribute("person") Person person){
-			
 			service.save(person);
-			return "redirect:person?id="+person.getId();
-		}				
-				
+			return "redirect:person/view?id="+person.getId();
+		}
+	
 		@ModelAttribute ("person")
 		public Person getPerson(@RequestParam(value="id",required=false) Long id){
 			return id == null ? new Person() : service.findOne(id);

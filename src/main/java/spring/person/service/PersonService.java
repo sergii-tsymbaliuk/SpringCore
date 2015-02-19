@@ -1,5 +1,7 @@
 package spring.person.service;
 
+import java.util.Date;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -15,6 +17,8 @@ public class PersonService {
 	PersonDao personDao;
 
 	public <S extends Person> S save(S entity) {
+		if (entity.getCreateDate() == null) 
+			entity.setCreateDate(new Date());
 		return personDao.save(entity);
 	}
 
