@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import spring.person.model.Person;
 
 @Controller
+@RequestMapping("person")
 public class PersonController extends PersonAbstractController {
 
-		@RequestMapping("person/view")
+		@RequestMapping("view")
 		public String showViewForm(){
 			return "person/view";
 		}
-		
 		
 		@RequestMapping("")
 		public String showPersonList(Model model){
@@ -25,24 +25,24 @@ public class PersonController extends PersonAbstractController {
 			return "person/list";
 		}
 		
-		@RequestMapping(value="person/add", method = RequestMethod.GET)
+		@RequestMapping(value="add", method = RequestMethod.GET)
 		public String showAddform(){
 			return "person/add";
 		}
 		
-		@RequestMapping(value="person/edit", method = RequestMethod.GET)
+		@RequestMapping(value="edit", method = RequestMethod.GET)
 		public String showEditPersonForm(){
 			return "person/edit";
 		}					
 
-		@RequestMapping(value={"person/add","person/edit"}, method = RequestMethod.POST)
+		@RequestMapping(value={"add","person/edit"}, method = RequestMethod.POST)
 		public String savePerson(
 			@ModelAttribute("person") Person person){
 			service.save(person);
 			return "redirect:person/view?id="+person.getId();
 		}
 	
-		@RequestMapping(value="person/delete", method = RequestMethod.POST)
+		@RequestMapping(value="delete", method = RequestMethod.POST)
 		public String deletePerson( @RequestParam("id") Person person){ //thanks to data binder !
 			service.delete(person);
 			return "";
