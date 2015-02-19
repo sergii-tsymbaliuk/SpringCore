@@ -8,8 +8,8 @@
 </head>
 <body>
 <form action="add" method="post">
-	<input name="name">name</input>
-  	<input name="age">age</input>
+	<input name="name">name</input><br>
+  	<input name="age">age</input><br>
 	<input type="submit">  	
 </form>
 </body>

@@ -12,7 +12,11 @@
 	<b>Name : </b>${person.name}<br>
 	<b>Age : </b>${person.age}	<br>
 	<b>Date : </b>${person.createDate}	<br>	
-	<a href="person/edit?id=${person.id}">edit</a>	
+	<a href="person/edit?id=${person.id}">edit</a><br>	
 	<a href="person/add">add</a>	
+		
+	<form action="delete?id=${person.id}" method="post">
+		<input type="submit" value="DELETE">  	
+	</form>	
 </body>
 </html>

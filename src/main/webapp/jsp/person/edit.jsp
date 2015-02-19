@@ -8,7 +8,7 @@
 </head>
 <body>
 <form action="edit?id=${person.id}" method="post">
-	<input name="name" value ="${person.name}">name</input>
+	<input name="name" value ="${person.name}">name</input><br>
   	<input name="age" value ="${person.age}">age</input>
 	<input type="submit" name="save">  	
 </form>

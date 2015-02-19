@@ -24,19 +24,7 @@ public class PersonController {
 		@Resource
 		PersonService service;
 		
-//		@RequestMapping("person")
-//		public String getPerson(HttpServletRequest request, Map<String,Object> model){
-//			Long id = Long.valueOf(request.getParameter("id"));
-//			System.out.println("id = "+id);
-//			//Person p = new Person("Philipp");
-//			//p.setAge(48);			
-//			Person p = service.findOne(id);
-//			System.out.println("person="+p);
-//
-//			model.put("person",p);
-//			return "person/view";
-//		}
-//		
+	
 		@RequestMapping("person/view")
 		public String showViewForm(){
 			return "person/view";
@@ -59,6 +47,12 @@ public class PersonController {
 			return "redirect:person/view?id="+person.getId();
 		}
 	
+		@RequestMapping(value="person/delete", method = RequestMethod.POST)
+		public String deletePerson( @RequestParam("id") Long id){
+			service.delete(id);
+			return "";
+		}
+		
 		@ModelAttribute ("person")
 		public Person getPerson(@RequestParam(value="id",required=false) Long id){
 			return id == null ? new Person() : service.findOne(id);
