@@ -1,4 +1,4 @@
 spring\person\web\PersonController.class
-spring\person\model\Person.class
 spring\test\PersonTest.class
+spring\person\model\Person.class
 spring\person\dao\PersonDao.class
