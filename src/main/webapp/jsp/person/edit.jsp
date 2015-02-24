@@ -9,7 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="edit?id=${person.id}" method="post">
+
+
+<form action='<c:url value="/person/edit?id=${person.id}"/>' method="post">
 	<s:message code="name" /> : <input name="name" value ="${person.name}"> </input><br>
   	<s:message code="age" /> : <input name="age" value ="${person.age}"> </input> <br>
 	<input type="submit" name="save">  	

@@ -8,5 +8,5 @@ import spring.person.model.Person;
 public interface PersonDao extends 
 				CrudRepository<Person, Long>
 {	
-
+	Person findByLoginAndPassword(String login, String password);
 }

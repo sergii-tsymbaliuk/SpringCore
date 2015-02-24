@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -52,21 +53,25 @@ public class PersonService {
 	}
 
 	@Transactional
+	@Secured(value = { "ROLE_ADMIN" })	
 	public void delete(Long id) {
 		personDao.delete(id);
 	}
 
 	@Transactional
+	@Secured(value = { "ROLE_ADMIN" })
 	public void delete(Person entity) {
 		personDao.delete(entity);
 	}
 
 	@Transactional
+	@Secured(value = { "ROLE_ADMIN" })	
 	public void delete(Iterable<? extends Person> entities) {
 		personDao.delete(entities);
 	}
 
 	@Transactional
+	@Secured(value = { "ROLE_ADMIN" })	
 	public void deleteAll() {
 		personDao.deleteAll();
 	}

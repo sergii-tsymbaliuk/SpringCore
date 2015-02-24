@@ -12,9 +12,10 @@
 		<!--  Urls which needs authentication, only fully authenticated users can get access-->
 		<intercept-url pattern="/**" access="IS_AUTHENTICATED_FULLY" />
 		<!-- login form  -->
-		<form-login login-page="" />
+		
+		<form-login login-page="" default-target-url="/person/list"/>
 		<!-- logout  -->
-		<logout logout-url="/logout" logout-success-url="/spring_security_login" />
+		<logout logout-url="/person/logout" logout-success-url="/spring_security_login" />
 	</http>
 
 	<authentication-manager>

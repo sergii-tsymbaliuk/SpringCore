@@ -14,5 +14,6 @@
 	<c:forEach var="p" items="${personList}">
 		<a href='<c:url value="/person/view?id=${p.id}"/>'> ${p.name} ${p.age} ${p.createDate} </a><BR>
 	</c:forEach>
+	<a href='<c:url value="/person/add"/>'>add</a>
 </body>
 </html>

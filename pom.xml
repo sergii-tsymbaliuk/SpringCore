@@ -7,6 +7,7 @@
 	<name>JavaSpringAll</name>
 	<packaging>war</packaging>
 	<build>
+		<finalName>JavaSpringAll</finalName>	
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
@@ -28,7 +29,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>JavaSpringAll</finalName>
 	</build>
 
 	<dependencies>
@@ -111,6 +111,12 @@
 
 			<version>LATEST</version>
 
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>LATEST</version>
 		</dependency>
 
 	</dependencies>

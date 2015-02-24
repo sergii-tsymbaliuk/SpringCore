@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="add" method="post">
+<form action='<c:url value="/person/add"/>' method="post">
 	<s:message code="name" />  : <input name="name"> </input><br>
   	<s:message code="age" /> : <input name="age"> </input><br>
 	<input type="submit">  	
