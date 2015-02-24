@@ -12,6 +12,7 @@
 		http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository-1.7.xsd">
 
 	<!-- <context:property-placeholder location="app.prop"/>-->
+	<import resource="securityContext.xml"/>
 	<context:annotation-config />
 	<context:component-scan base-package="spring"/>
 	<jpa:repositories base-package="spring"/>	
