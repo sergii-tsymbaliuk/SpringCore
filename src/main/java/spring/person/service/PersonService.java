@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import spring.person.dao.PersonDao;
-import spring.person.model.Person;
 
 
 @Scope(value="request", proxyMode = ScopedProxyMode.TARGET_CLASS ) 
@@ -32,7 +31,10 @@ public class PersonService {
 		return personDao.save(entities);
 	}
 
-	public Person findOne(Long id) {
+	public Person findOne(Long id){
+//		if (id <=0 ){
+//			throw new Exception("id must be > 0");
+//		}
 		return personDao.findOne(id);
 	}
 

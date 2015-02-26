@@ -16,9 +16,12 @@
 	<b>id : </b>${person.id} <br> 
 	<b>	<s:message code="name" /> : </b>${person.name}<br>
 	<b> <s:message code="age" /> : </b>${person.age}	<br>
-	<b>Date : </b>${person.createDate}	<br>
+	<b>Date : </b>${person.createDate}	<br>  		
 	
 	<sec:authorize ifAnyGranted="ROLE_ADMIN"> 	
+	  	<b> <s:message code="login" /> : </b> ${person.login} <br>
+	  	<b> <s:message code="password" /> : </b> ${person.password} <br>
+	  	<b> <s:message code="roles" /> : </b> ${person.roles} <br>  		
 		<a href='<c:url value="/person/edit?id=${person.id}"/>'>edit</a><br>	
 	
 		<form action='<c:url value="/person/delete?id=${person.id}"/>' method="post">

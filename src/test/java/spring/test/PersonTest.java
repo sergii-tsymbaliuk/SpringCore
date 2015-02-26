@@ -13,7 +13,9 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
-import spring.person.dao.PersonDao;
+
+//import spring.person.dao.PersonDao;
+import  spring.person.service.PersonService;
 
 //1. Configure test context 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -26,13 +28,17 @@ import spring.person.dao.PersonDao;
 public class PersonTest extends AbstractTransactionalJUnit4SpringContextTests {
 	@Autowired
 	PersonDao personDao;
+	//@Resource
+	//PersonService service;
 	
 	@Test
-	public void read(){
-		System.out.println(personDao.getClass());
+	public void read ()  throws Exception{
+		//System.out.println(personDao.getClass());
 
-		System.out.println("=================================\nfindOne\n==============================");		
-		System.out.println(personDao.findOne(1L));	
+		System.out.println("=================================\nfindOne -1L\n==============================");		
+		System.out.println(personDao.findOne(-1L));
+		System.out.println("=================================\nfindOne 1L\n==============================");
+		System.out.println(personDao.findOne(1L));			
 	}
 
 }

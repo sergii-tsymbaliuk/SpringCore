@@ -32,7 +32,12 @@ abstract public class PersonAbstractController {
 						Person person = null;
 						if ( !(personId == null || personId.trim().isEmpty()) ) {
 							Long id = Long.valueOf(personId);
-							person = service.findOne(id);
+							try {
+								person = service.findOne(id);
+							} catch (Exception e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 						}
 						setValue(person);
 					}

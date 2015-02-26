@@ -12,7 +12,10 @@
 <form action='<c:url value="/person/add"/>' method="post">
 	<s:message code="name" />  : <input name="name"> </input><br>
   	<s:message code="age" /> : <input name="age"> </input><br>
-	<input type="submit">  	
+  	<s:message code="login" /> : <input name="login"> </input><br>
+  	<s:message code="password" /> : <input name="password"> </input><br>
+<%--   	<s:message code="roles" /> : <input name="roles"> </input><br>  	  	  	 --%>
+	<input type="submit" name="Save">  	
 </form>
 </body>
 </html>

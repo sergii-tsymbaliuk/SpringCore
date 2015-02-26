@@ -14,6 +14,9 @@
 <form action='<c:url value="/person/edit?id=${person.id}"/>' method="post">
 	<s:message code="name" /> : <input name="name" value ="${person.name}"> </input><br>
   	<s:message code="age" /> : <input name="age" value ="${person.age}"> </input> <br>
+  	<s:message code="login" /> : <input name="login" value ="${person.login}"> </input> <br>
+  	<s:message code="password" /> : <input name="password" value ="${person.password}"> </input> <br>
+<%--   	<s:message code="roles" /> : <input name="roles" value ="${person.roles}"> </input> <br>  	  	  	 --%>
 	<input type="submit" name="save">  	
 </form>
 </body>
