@@ -3,7 +3,7 @@ package spring.person.dao;
 //import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
-import spring.person.model.Person;
+import spring.person.Person;
 
 public interface PersonDao extends 
 				CrudRepository<Person, Long>

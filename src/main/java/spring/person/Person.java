@@ -1,4 +1,4 @@
-package spring.person.model;
+package spring.person;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -11,6 +11,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import spring.person.model.UserRole;
 
 @Entity
 public class Person {

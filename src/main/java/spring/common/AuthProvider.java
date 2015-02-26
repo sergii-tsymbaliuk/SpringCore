@@ -13,8 +13,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import spring.person.Person;
 import spring.person.dao.PersonDao;
-import spring.person.model.Person;
 import spring.person.model.UserRole;
 
 @Service

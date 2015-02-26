@@ -17,12 +17,13 @@ public class LoggerAspect {
 //	public void before(){
 //		System.out.println("Before");
 //	}
-	
-//	@Before("execution(* spring..*.*(..)) && args(id)") // with args
-//	public void begfore(JoinPoint jp){
-	
-	@Before("execution(* spring..*.*(..))") // with args	
+
+//	@Before("execution(* spring..*.*(..))") // with args
+	@Before("execution(* spring..*.*(..)) && args(id)") // with args
 	public void before(JoinPoint jp, Long id){	
+//	public void before(JoinPoint jp){
+
+
 		System.out.println("======================= Before =======================");
 		System.out.println("== getKind =======================");		
 		System.out.println(jp.getKind());
@@ -71,7 +72,7 @@ public class LoggerAspect {
 	
 	@AfterThrowing(value="execution(* spring..*.*(..))", throwing="ex")
 	public void afterThrowning(JoinPoint jp, Throwable ex ){
-		System.out.println("======================= AfterThrowing =======================");		
+		System.out.println("======================= After Throwing =======================");		
 		System.out.println("JP:" + jp.toString());
 		System.out.println("JP:" + ex);		
 	}

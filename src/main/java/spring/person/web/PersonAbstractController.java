@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 
-import spring.person.model.Person;
+import spring.person.Person;
 import spring.person.service.PersonService;
 
 

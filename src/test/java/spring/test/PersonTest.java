@@ -1,5 +1,7 @@
 package spring.test;
 
+import javax.annotation.Resource;
+
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,7 +16,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
 
-//import spring.person.dao.PersonDao;
+
+import org.springframework.test.context.web.WebAppConfiguration;
+
+import spring.person.dao.PersonDao;
 import  spring.person.service.PersonService;
 
 //1. Configure test context 
@@ -25,20 +30,22 @@ import  spring.person.service.PersonService;
 @TransactionConfiguration(transactionManager= "transactionManager",defaultRollback=false)
 //4. NiceTo Have
 @FixMethodOrder(MethodSorters.JVM)
+//@WebAppConfiguration
 public class PersonTest extends AbstractTransactionalJUnit4SpringContextTests {
 	@Autowired
 	PersonDao personDao;
-	//@Resource
-	//PersonService service;
+
+	@Autowired
+	PersonService service;
 	
 	@Test
 	public void read ()  throws Exception{
 		//System.out.println(personDao.getClass());
 
 		System.out.println("=================================\nfindOne -1L\n==============================");		
-		System.out.println(personDao.findOne(-1L));
+		System.out.println(service.findOne(-1L));
 		System.out.println("=================================\nfindOne 1L\n==============================");
-		System.out.println(personDao.findOne(1L));			
+		System.out.println(service.findOne(1L));			
 	}
 
 }

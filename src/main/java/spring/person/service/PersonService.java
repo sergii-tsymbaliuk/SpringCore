@@ -10,6 +10,7 @@ import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import spring.person.Person;
 import spring.person.dao.PersonDao;
 
 
@@ -31,10 +32,10 @@ public class PersonService {
 		return personDao.save(entities);
 	}
 
-	public Person findOne(Long id){
-//		if (id <=0 ){
-//			throw new Exception("id must be > 0");
-//		}
+	public Person findOne(Long id) throws Exception{
+		if (id <=0 ){
+			throw new Exception("id must be > 0");
+		}
 		return personDao.findOne(id);
 	}
 

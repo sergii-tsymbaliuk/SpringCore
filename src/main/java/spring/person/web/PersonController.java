@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import spring.person.model.Person;
+import spring.person.Person;
 
 @Scope() //("session") //Singleton for session/request/server
 @Controller

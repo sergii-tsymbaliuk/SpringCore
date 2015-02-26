@@ -27,7 +27,7 @@
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
 
-	<bean 	id="entityManagerFactory"
+	<bean id="entityManagerFactory"
 			class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" >
 			
 		<property name="persistenceUnitName" value="jpa" />
@@ -53,5 +53,27 @@
 		<property name="username" value="root" />
 		<property name="password" value="pass" />
 	</bean>
+	
+	<bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+	    <property name="scopes">
+	        <map>
+	            <entry key="request">
+	                <bean class="org.springframework.context.support.SimpleThreadScope"/>
+	            </entry>
+	        </map>
+	    </property>
+	</bean>
+	
+		
+<!-- 	<aop:config> -->
+<!-- 		<aop:advisor pointcut="spring.common.TransactionConfig.serviceLayer()" -->
+<!-- 			advice-ref="tx-advice" /> -->
+<!-- 	</aop:config> -->
+
+<!-- 	<tx:advice id="tx-advice"> -->
+<!-- 		<tx:attributes> -->
+<!-- 			<tx:method name="save*"/>			 -->
+<!-- 		</tx:attributes> -->
+<!-- 	</tx:advice>	 -->
 	
 </beans>
