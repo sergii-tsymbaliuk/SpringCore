@@ -42,8 +42,8 @@ public class PersonTest extends AbstractTransactionalJUnit4SpringContextTests {
 	public void read ()  throws Exception{
 		//System.out.println(personDao.getClass());
 
-		System.out.println("=================================\nfindOne -1L\n==============================");		
-		System.out.println(service.findOne(-1L));
+		//System.out.println("=================================\nfindOne -1L\n==============================");		
+		//System.out.println(service.findOne(-1L));
 		System.out.println("=================================\nfindOne 1L\n==============================");
 		System.out.println(service.findOne(1L));			
 	}
