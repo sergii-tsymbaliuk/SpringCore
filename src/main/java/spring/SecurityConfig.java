@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 import spring.common.AuthProvider;
 
-@Configuration
+//@Configuration //Turned off due to loaded xml file
 @EnableGlobalMethodSecurity(securedEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 

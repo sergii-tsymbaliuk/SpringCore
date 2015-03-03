@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -19,7 +20,8 @@ import spring.person.model.UserRole;
 
 @Service
 public class AuthProvider implements AuthenticationProvider {
-	@Resource
+	
+	@Autowired
 	PersonDao personDao;
 	
 	@Override
@@ -30,12 +32,16 @@ public class AuthProvider implements AuthenticationProvider {
 		String login = authentication.getName();
 		String password = authentication.getCredentials().toString();
 		
-		System.out.printf("Login : %s, pass : %s\n", login, password);
+		System.out.printf("Login : %s, password : %s\n", login, password);
 		
 		Person user = personDao.findByLoginAndPassword(login, password);
 		
 		if (user == null ){
+			System.out.println("User not found");
 			throw new UsernameNotFoundException("Login failed");
+		}
+		else {
+			System.out.println("Person: "+ user.toString());
 		}
 		
 		List<GrantedAuthority> grantedAuths = new ArrayList<>(); 

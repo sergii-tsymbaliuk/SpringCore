@@ -4,9 +4,14 @@ package spring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
 
 @EnableAutoConfiguration
 @ComponentScan("spring")
+//To load config from xml file:
+@ImportResource("classpath:securityContext.xml")
+// The default /application.properties may be overriden:
+//@PropertySource("classpath:app.prop")
 public class Application {
 
 	public static void main(String[] args) {
