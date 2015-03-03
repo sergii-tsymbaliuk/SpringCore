@@ -19,33 +19,30 @@ public class LoggerAspect {
 //	}
 
 //	@Before("execution(* spring..*.*(..))") // with args
-	@Before("execution(* spring..*.*(..)) && args(id)") // with args
-	public void before(JoinPoint jp, Long id){	
-//	public void before(JoinPoint jp){
-
-
-		System.out.println("======================= Before =======================");
-		System.out.println("== getKind =======================");		
-		System.out.println(jp.getKind());
-		System.out.println("== getTarget =======================");		
-		System.out.println(jp.getTarget());		
-		System.out.println("== getThis =======================");		
-		System.out.println(jp.getThis());
-		System.out.println("== getSignature =======================");		
-		System.out.println(jp.getSignature());
-		System.out.println("== getArgs =======================");		
-		System.out.println(jp.getArgs());
-		System.out.println("== toLongString =======================");		
-		System.out.println(jp.toLongString());
-		System.out.println("== toShortString =======================");		
-		System.out.println(jp.toShortString());
+//	@Before("execution(* spring..*.*(..)) && args(id)") // with args
+	@Before("execution(* spring.person..*.*(..))")
+	public void before(JoinPoint jp){	
+//		System.out.println("======================= Before =======================");
+//		System.out.println("== getKind =======================");		
+//		System.out.println(jp.getKind());
+//		System.out.println("== getTarget =======================");		
+//		System.out.println(jp.getTarget());		
+//		System.out.println("== getThis =======================");		
+//		System.out.println(jp.getThis());
+//		System.out.println("== getSignature =======================");		
+//		System.out.println(jp.getSignature());
+//		System.out.println("== getArgs =======================");		
+//		System.out.println(jp.getArgs());
+//		System.out.println("== toLongString =======================");		
+//		System.out.println(jp.toLongString());
+//		System.out.println("== toShortString =======================");		
+//		System.out.println(jp.toShortString());
 		System.out.println("== toString =======================");		
 		System.out.println(jp.toString());		
-		System.out.println("== arg");		
-		System.out.println("arg : " +id);		
+	
 	}
 	
-	@AfterReturning(value="execution(* spring..*.*(..))",returning = "ret")
+	@AfterReturning(value="execution(* spring.person..*.*(..))",returning = "ret")
 	public void after(JoinPoint jp, Object ret){	
 		System.out.println("======================= After Returning =======================");
 		System.out.println("== getKind ");		
@@ -70,21 +67,21 @@ public class LoggerAspect {
 	}
 	
 	
-	@AfterThrowing(value="execution(* spring..*.*(..))", throwing="ex")
+	@AfterThrowing(value="execution(* spring.person..*.*(..))", throwing="ex")
 	public void afterThrowning(JoinPoint jp, Throwable ex ){
 		System.out.println("======================= After Throwing =======================");		
 		System.out.println("JP:" + jp.toString());
 		System.out.println("JP:" + ex);		
 	}
 	
-	@After(value="execution(* spring..*.*(..))")
+	@After(value="execution(* spring.person..*.*(..))")
 	public void after(JoinPoint jp){
 		System.out.println("======================= After =======================");		
 		System.out.println("JP:" + jp.toString());
 		//System.out.println("JP:" + ex);
 	}
 	
-	@Around(value="execution(* spring..*.*(..))")
+	@Around(value="execution(* spring.person..*.*(..))")
 	public void around(JoinPoint jp){
 		System.out.println("======================= Around =======================");		
 		System.out.println("JP:" + jp.toString());		

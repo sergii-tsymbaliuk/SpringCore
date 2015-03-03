@@ -14,7 +14,7 @@ import spring.person.Person;
 import spring.person.dao.PersonDao;
 
 
-@Scope(value="request", proxyMode = ScopedProxyMode.TARGET_CLASS ) 
+//@Scope(value="request", proxyMode = ScopedProxyMode.TARGET_CLASS ) 
 @Service
 public class PersonService {
 	

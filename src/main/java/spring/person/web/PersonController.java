@@ -22,7 +22,7 @@ import spring.person.Person;
 public class PersonController extends PersonAbstractController {
 
 	
-		@Secured("ROLE_USER")
+//		@Secured("ROLE_USER")
 		@RequestMapping("")
 		public String showPersonList(Model model){
 			System.out.println("PC: "+ this);			
@@ -34,7 +34,7 @@ public class PersonController extends PersonAbstractController {
 			return "person/list";
 		}
 
-		@Secured("ROLE_USER")
+//		@Secured("ROLE_USER")
 		@RequestMapping("view")
 		public String showViewForm(Model model){
 			model.addAttribute("test", new Date());
@@ -68,7 +68,7 @@ public class PersonController extends PersonAbstractController {
 			return "";
 		}
 		
-		@Secured("ROLE_USER")		
+//		@Secured("ROLE_USER")		
 		@ModelAttribute ("person")
 		public Person getPerson(@RequestParam(value="id",required=false) Person person){
 			return person == null ? new Person() : person;
