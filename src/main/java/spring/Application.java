@@ -9,6 +9,7 @@ import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.jms.annotation.EnableJms;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -24,7 +25,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling		// Enables scheduling
 @EnableAsync			// Enables async run of tasks
 
-@EnableCaching
+@EnableCaching			// Enabling cache
+
+@EnableJms				// Enables JMS
 public class Application {
 
 	public static void main(String[] args) {
