@@ -2,7 +2,12 @@ package spring.person.web;
 
 
 import java.util.Date;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
@@ -14,22 +19,36 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import spring.person.Person;
+import spring.sheduling.ScheduledTask;
 
 @Scope() //("session") //Singleton for session/request/server
 @Controller
-@RequestMapping("person")
+@RequestMapping({"","/person"})
 //@SessionAttributes("test")
 public class PersonController extends PersonAbstractController {
-
+		
+		@Autowired
+		ScheduledTask scheduledTask;  
 	
 //		@Secured("ROLE_USER")
-		@RequestMapping("")
+		@RequestMapping({"","list"})
 		public String showPersonList(Model model){
-			System.out.println("PC: "+ this);			
-			System.out.println("PC.class: "+ this.getClass());			
-			System.out.println("Service= "+ service);
-			System.out.println("Service.class = "+ service.getClass());
-			
+//			System.out.println("PC: "+ this);			
+//			System.out.println("PC.class: "+ this.getClass());			
+//			System.out.println("Service= "+ service);
+//			System.out.println("Service.class = "+ service.getClass());
+			System.out.println("Befor async");
+//			scheduledTask.doAsyncTask();
+			System.out.println("Get async result");			
+			Future<String> asresult = scheduledTask.getAsyncResult();
+			try {
+				System.out.println("async result = " + asresult.get() );
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			} catch (ExecutionException e) {
+				e.printStackTrace();
+			}			
+			System.out.println("After async");			
 			model.addAttribute("personList", service.findAll());
 			return "person/list";
 		}

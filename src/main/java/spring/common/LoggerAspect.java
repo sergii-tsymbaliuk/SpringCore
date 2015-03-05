@@ -31,13 +31,13 @@ public class LoggerAspect {
 //		System.out.println(jp.getThis());
 //		System.out.println("== getSignature =======================");		
 //		System.out.println(jp.getSignature());
-		System.out.println("== getArgs =======================");		
-		System.out.println(jp.getArgs());
+//		System.out.println("== getArgs =======================");		
+//		System.out.println(jp.getArgs());
 //		System.out.println("== toLongString =======================");		
 //		System.out.println(jp.toLongString());
 //		System.out.println("== toShortString =======================");		
 //		System.out.println(jp.toShortString());
-		System.out.println("== toString =======================");		
+//		System.out.println("== toString =======================");		
 		System.out.println(jp.toString());		
 	
 	}
@@ -74,11 +74,11 @@ public class LoggerAspect {
 		System.out.println("JP:" + ex);		
 	}
 	
-	@After(value="execution(* spring.person..*.*(..))")
-	public void after(JoinPoint jp){
-		System.out.println("======================= After =======================");		
-		System.out.println("JP:" + jp.toString());
-	}
+//	@After(value="execution(* spring.person..*.*(..))")
+//	public void after(JoinPoint jp){
+//		System.out.println("======================= After =======================");		
+//		System.out.println("JP:" + jp.toString());
+//	}
 	
 //	@Around(value="execution(* spring.person..*.*(..))")
 //	public void around(JoinPoint jp){
