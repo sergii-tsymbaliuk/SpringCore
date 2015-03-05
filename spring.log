@@ -1397,3 +1397,448 @@ java.lang.Error: Unresolved compilation problem:
 2015-03-05 14:08:39.990  INFO 1132 --- [pool-2-thread-1] spring.sheduling.ScheduledTask           : Start Job
 2015-03-05 14:08:42.003  INFO 1132 --- [pool-2-thread-1] spring.sheduling.ScheduledTask           : End Job
 2015-03-05 14:08:47.015  INFO 1132 --- [pool-2-thread-1] spring.sheduling.ScheduledTask           : Start Job
+2015-03-05 14:14:25.356  INFO 4776 --- [main] spring.Application                       : Starting Application on EPUAKYIW1562 with PID 4776 (C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes started by Sergii_Tsymbaliuk in C:\Users\Sergii_Tsymbaliuk\ws\SpringAll)
+2015-03-05 14:14:25.356 DEBUG 4776 --- [main] spring.Application                       : Running with Spring Boot v1.2.2.RELEASE, Spring v4.1.5.RELEASE
+2015-03-05 14:14:27.524  INFO 4776 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-03-05 14:14:27.524  INFO 4776 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2015-03-05 14:14:27.815  INFO 4776 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring embedded WebApplicationContext
+2015-03-05 14:14:27.815  INFO 4776 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2428 ms
+2015-03-05 14:14:30.562  INFO 4776 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fcd6521: startup date [Thu Mar 05 14:14:25 EET 2015]; root of context hierarchy
+2015-03-05 14:14:30.624  INFO 4776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit || /person/edit],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showEditPersonForm()
+2015-03-05 14:14:30.624  INFO 4776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[ || /list || /person || /person/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showPersonList(org.springframework.ui.Model)
+2015-03-05 14:14:30.624  INFO 4776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/view || /person/view],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showViewForm(org.springframework.ui.Model)
+2015-03-05 14:14:30.624  INFO 4776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add || /person/add],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showAddform()
+2015-03-05 14:14:30.624  INFO 4776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add || /edit || /person/add || /person/edit],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.savePerson(spring.person.Person)
+2015-03-05 14:14:30.624  INFO 4776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delete || /person/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.deletePerson(spring.person.Person)
+2015-03-05 14:14:30.624  INFO 4776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ws/person/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonRestController.showViewForm(spring.person.Person,org.springframework.ui.Model)
+2015-03-05 14:14:30.624  INFO 4776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-03-05 14:14:30.624  INFO 4776 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2015-03-05 14:14:30.656  INFO 4776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-03-05 14:14:30.656  INFO 4776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-03-05 14:14:30.702  INFO 4776 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-03-05 14:14:31.092  INFO 4776 --- [main] spring.Application                       : Started Application in 5.97 seconds (JVM running for 6.282)
+2015-03-05 14:14:37.488  INFO 4776 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2015-03-05 14:14:37.488  INFO 4776 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2015-03-05 14:14:37.489  INFO 4776 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 1 ms
+2015-03-05 14:16:10.078  INFO 3164 --- [main] spring.Application                       : Starting Application on EPUAKYIW1562 with PID 3164 (C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes started by Sergii_Tsymbaliuk in C:\Users\Sergii_Tsymbaliuk\ws\SpringAll)
+2015-03-05 14:16:10.078 DEBUG 3164 --- [main] spring.Application                       : Running with Spring Boot v1.2.2.RELEASE, Spring v4.1.5.RELEASE
+2015-03-05 14:16:12.216  INFO 3164 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-03-05 14:16:12.216  INFO 3164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2015-03-05 14:16:12.497  INFO 3164 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring embedded WebApplicationContext
+2015-03-05 14:16:12.497  INFO 3164 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2356 ms
+2015-03-05 14:16:15.291  INFO 3164 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fcd6521: startup date [Thu Mar 05 14:16:10 EET 2015]; root of context hierarchy
+2015-03-05 14:16:15.353  INFO 3164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[ || /list || /person || /person/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showPersonList(org.springframework.ui.Model)
+2015-03-05 14:16:15.353  INFO 3164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/view || /person/view],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showViewForm(org.springframework.ui.Model)
+2015-03-05 14:16:15.353  INFO 3164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add || /person/add],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showAddform()
+2015-03-05 14:16:15.353  INFO 3164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add || /edit || /person/add || /person/edit],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.savePerson(spring.person.Person)
+2015-03-05 14:16:15.353  INFO 3164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delete || /person/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.deletePerson(spring.person.Person)
+2015-03-05 14:16:15.353  INFO 3164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit || /person/edit],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showEditPersonForm()
+2015-03-05 14:16:15.353  INFO 3164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ws/person/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonRestController.showViewForm(spring.person.Person,org.springframework.ui.Model)
+2015-03-05 14:16:15.353  INFO 3164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-03-05 14:16:15.353  INFO 3164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2015-03-05 14:16:15.384  INFO 3164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-03-05 14:16:15.384  INFO 3164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-03-05 14:16:15.447  INFO 3164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-03-05 14:16:15.852  INFO 3164 --- [main] spring.Application                       : Started Application in 5.992 seconds (JVM running for 6.31)
+2015-03-05 14:16:20.610  INFO 3164 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2015-03-05 14:16:20.626  INFO 3164 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2015-03-05 14:16:20.627  INFO 3164 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 1 ms
+2015-03-05 14:26:00.126  INFO 4520 --- [main] spring.Application                       : Starting Application on EPUAKYIW1562 with PID 4520 (C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes started by Sergii_Tsymbaliuk in C:\Users\Sergii_Tsymbaliuk\ws\SpringAll)
+2015-03-05 14:26:00.126 DEBUG 4520 --- [main] spring.Application                       : Running with Spring Boot v1.2.2.RELEASE, Spring v4.1.5.RELEASE
+2015-03-05 14:26:02.263  INFO 4520 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-03-05 14:26:02.263  INFO 4520 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2015-03-05 14:26:02.560  INFO 4520 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring embedded WebApplicationContext
+2015-03-05 14:26:02.560  INFO 4520 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2403 ms
+2015-03-05 14:26:05.088  INFO 4520 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2015-03-05 14:26:05.088 ERROR 4520 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personService' defined in file [C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes\spring\person\service\PersonService.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:547)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at spring.Application.main(Application.java:40)
+Caused by: java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.validateCacheOperation(SpringCacheAnnotationParser.java:240)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parsePutAnnotation(SpringCacheAnnotationParser.java:149)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:81)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:57)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource$2.getCacheOperations(AnnotationCacheOperationSource.java:124)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.determineCacheOperations(AnnotationCacheOperationSource.java:142)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.findCacheOperations(AnnotationCacheOperationSource.java:121)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.computeCacheOperations(AbstractFallbackCacheOperationSource.java:140)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.getCacheOperations(AbstractFallbackCacheOperationSource.java:100)
+	at org.springframework.cache.interceptor.CacheOperationSourcePointcut.matches(CacheOperationSourcePointcut.java:39)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:262)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:294)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:118)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:88)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:69)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:330)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	... 12 common frames omitted
+
+2015-03-05 14:27:41.749  INFO 3892 --- [main] spring.Application                       : Starting Application on EPUAKYIW1562 with PID 3892 (C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes started by Sergii_Tsymbaliuk in C:\Users\Sergii_Tsymbaliuk\ws\SpringAll)
+2015-03-05 14:27:41.749 DEBUG 3892 --- [main] spring.Application                       : Running with Spring Boot v1.2.2.RELEASE, Spring v4.1.5.RELEASE
+2015-03-05 14:27:43.855  INFO 3892 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-03-05 14:27:43.855  INFO 3892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2015-03-05 14:27:44.152  INFO 3892 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring embedded WebApplicationContext
+2015-03-05 14:27:44.152  INFO 3892 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2372 ms
+2015-03-05 14:27:46.695  INFO 3892 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2015-03-05 14:27:46.742 ERROR 3892 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personService' defined in file [C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes\spring\person\service\PersonService.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:547)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at spring.Application.main(Application.java:40)
+Caused by: java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.validateCacheOperation(SpringCacheAnnotationParser.java:240)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parsePutAnnotation(SpringCacheAnnotationParser.java:149)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:81)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:57)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource$2.getCacheOperations(AnnotationCacheOperationSource.java:124)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.determineCacheOperations(AnnotationCacheOperationSource.java:142)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.findCacheOperations(AnnotationCacheOperationSource.java:121)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.computeCacheOperations(AbstractFallbackCacheOperationSource.java:140)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.getCacheOperations(AbstractFallbackCacheOperationSource.java:100)
+	at org.springframework.cache.interceptor.CacheOperationSourcePointcut.matches(CacheOperationSourcePointcut.java:39)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:262)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:294)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:118)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:88)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:69)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:330)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	... 12 common frames omitted
+
+2015-03-05 14:29:31.568  INFO 3288 --- [main] spring.Application                       : Starting Application on EPUAKYIW1562 with PID 3288 (C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes started by Sergii_Tsymbaliuk in C:\Users\Sergii_Tsymbaliuk\ws\SpringAll)
+2015-03-05 14:29:31.583 DEBUG 3288 --- [main] spring.Application                       : Running with Spring Boot v1.2.2.RELEASE, Spring v4.1.5.RELEASE
+2015-03-05 14:29:33.736  INFO 3288 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-03-05 14:29:33.736  INFO 3288 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2015-03-05 14:29:34.037  INFO 3288 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring embedded WebApplicationContext
+2015-03-05 14:29:34.037  INFO 3288 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2423 ms
+2015-03-05 14:29:36.595  INFO 3288 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2015-03-05 14:29:36.611 ERROR 3288 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personService' defined in file [C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes\spring\person\service\PersonService.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:547)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at spring.Application.main(Application.java:40)
+Caused by: java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.validateCacheOperation(SpringCacheAnnotationParser.java:240)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parsePutAnnotation(SpringCacheAnnotationParser.java:149)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:81)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:57)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource$2.getCacheOperations(AnnotationCacheOperationSource.java:124)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.determineCacheOperations(AnnotationCacheOperationSource.java:142)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.findCacheOperations(AnnotationCacheOperationSource.java:121)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.computeCacheOperations(AbstractFallbackCacheOperationSource.java:140)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.getCacheOperations(AbstractFallbackCacheOperationSource.java:100)
+	at org.springframework.cache.interceptor.CacheOperationSourcePointcut.matches(CacheOperationSourcePointcut.java:39)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:262)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:294)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:118)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:88)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:69)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:330)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	... 12 common frames omitted
+
+2015-03-05 14:30:31.600  INFO 3444 --- [main] spring.Application                       : Starting Application on EPUAKYIW1562 with PID 3444 (C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes started by Sergii_Tsymbaliuk in C:\Users\Sergii_Tsymbaliuk\ws\SpringAll)
+2015-03-05 14:30:31.600 DEBUG 3444 --- [main] spring.Application                       : Running with Spring Boot v1.2.2.RELEASE, Spring v4.1.5.RELEASE
+2015-03-05 14:30:33.784  INFO 3444 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-03-05 14:30:33.784  INFO 3444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2015-03-05 14:30:34.064  INFO 3444 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring embedded WebApplicationContext
+2015-03-05 14:30:34.064  INFO 3444 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2417 ms
+2015-03-05 14:30:36.561  INFO 3444 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2015-03-05 14:30:36.592 ERROR 3444 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personService' defined in file [C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes\spring\person\service\PersonService.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:547)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at spring.Application.main(Application.java:40)
+Caused by: java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.validateCacheOperation(SpringCacheAnnotationParser.java:240)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parsePutAnnotation(SpringCacheAnnotationParser.java:149)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:81)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:57)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource$2.getCacheOperations(AnnotationCacheOperationSource.java:124)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.determineCacheOperations(AnnotationCacheOperationSource.java:142)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.findCacheOperations(AnnotationCacheOperationSource.java:121)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.computeCacheOperations(AbstractFallbackCacheOperationSource.java:140)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.getCacheOperations(AbstractFallbackCacheOperationSource.java:100)
+	at org.springframework.cache.interceptor.CacheOperationSourcePointcut.matches(CacheOperationSourcePointcut.java:39)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:262)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:294)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:118)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:88)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:69)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:330)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	... 12 common frames omitted
+
+2015-03-05 14:34:13.451  INFO 4336 --- [main] spring.Application                       : Starting Application on EPUAKYIW1562 with PID 4336 (C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes started by Sergii_Tsymbaliuk in C:\Users\Sergii_Tsymbaliuk\ws\SpringAll)
+2015-03-05 14:34:13.467 DEBUG 4336 --- [main] spring.Application                       : Running with Spring Boot v1.2.2.RELEASE, Spring v4.1.5.RELEASE
+2015-03-05 14:34:15.604  INFO 4336 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-03-05 14:34:15.604  INFO 4336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2015-03-05 14:34:15.886  INFO 4336 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring embedded WebApplicationContext
+2015-03-05 14:34:15.886  INFO 4336 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2388 ms
+2015-03-05 14:34:18.273  INFO 4336 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2015-03-05 14:34:18.305 ERROR 4336 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personService' defined in file [C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes\spring\person\service\PersonService.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.findOne(java.lang.Long) throws java.lang.Exception'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:547)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at spring.Application.main(Application.java:40)
+Caused by: java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.findOne(java.lang.Long) throws java.lang.Exception'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.validateCacheOperation(SpringCacheAnnotationParser.java:240)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheableAnnotation(SpringCacheAnnotationParser.java:112)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:67)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:57)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource$2.getCacheOperations(AnnotationCacheOperationSource.java:124)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.determineCacheOperations(AnnotationCacheOperationSource.java:142)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.findCacheOperations(AnnotationCacheOperationSource.java:121)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.computeCacheOperations(AbstractFallbackCacheOperationSource.java:140)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.getCacheOperations(AbstractFallbackCacheOperationSource.java:100)
+	at org.springframework.cache.interceptor.CacheOperationSourcePointcut.matches(CacheOperationSourcePointcut.java:39)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:262)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:294)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:118)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:88)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:69)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:330)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	... 12 common frames omitted
+
+2015-03-05 14:35:18.445  INFO 4176 --- [main] spring.Application                       : Starting Application on EPUAKYIW1562 with PID 4176 (C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes started by Sergii_Tsymbaliuk in C:\Users\Sergii_Tsymbaliuk\ws\SpringAll)
+2015-03-05 14:35:18.445 DEBUG 4176 --- [main] spring.Application                       : Running with Spring Boot v1.2.2.RELEASE, Spring v4.1.5.RELEASE
+2015-03-05 14:35:20.566  INFO 4176 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-03-05 14:35:20.566  INFO 4176 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2015-03-05 14:35:20.848  INFO 4176 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring embedded WebApplicationContext
+2015-03-05 14:35:20.848  INFO 4176 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2372 ms
+2015-03-05 14:35:23.375  INFO 4176 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2015-03-05 14:35:23.391 ERROR 4176 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personService' defined in file [C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes\spring\person\service\PersonService.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:547)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at spring.Application.main(Application.java:40)
+Caused by: java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.validateCacheOperation(SpringCacheAnnotationParser.java:240)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parsePutAnnotation(SpringCacheAnnotationParser.java:149)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:81)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:57)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource$2.getCacheOperations(AnnotationCacheOperationSource.java:124)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.determineCacheOperations(AnnotationCacheOperationSource.java:142)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.findCacheOperations(AnnotationCacheOperationSource.java:121)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.computeCacheOperations(AbstractFallbackCacheOperationSource.java:140)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.getCacheOperations(AbstractFallbackCacheOperationSource.java:100)
+	at org.springframework.cache.interceptor.CacheOperationSourcePointcut.matches(CacheOperationSourcePointcut.java:39)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:262)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:294)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:118)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:88)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:69)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:330)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	... 12 common frames omitted
+
+2015-03-05 14:35:46.482  INFO 4848 --- [main] spring.Application                       : Starting Application on EPUAKYIW1562 with PID 4848 (C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes started by Sergii_Tsymbaliuk in C:\Users\Sergii_Tsymbaliuk\ws\SpringAll)
+2015-03-05 14:35:46.497 DEBUG 4848 --- [main] spring.Application                       : Running with Spring Boot v1.2.2.RELEASE, Spring v4.1.5.RELEASE
+2015-03-05 14:35:48.572  INFO 4848 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-03-05 14:35:48.588  INFO 4848 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2015-03-05 14:35:48.870  INFO 4848 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring embedded WebApplicationContext
+2015-03-05 14:35:48.870  INFO 4848 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2341 ms
+2015-03-05 14:35:51.351  INFO 4848 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2015-03-05 14:35:51.351 ERROR 4848 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personService' defined in file [C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes\spring\person\service\PersonService.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:547)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at spring.Application.main(Application.java:40)
+Caused by: java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.validateCacheOperation(SpringCacheAnnotationParser.java:240)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parsePutAnnotation(SpringCacheAnnotationParser.java:149)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:81)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:57)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource$2.getCacheOperations(AnnotationCacheOperationSource.java:124)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.determineCacheOperations(AnnotationCacheOperationSource.java:142)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.findCacheOperations(AnnotationCacheOperationSource.java:121)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.computeCacheOperations(AbstractFallbackCacheOperationSource.java:140)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.getCacheOperations(AbstractFallbackCacheOperationSource.java:100)
+	at org.springframework.cache.interceptor.CacheOperationSourcePointcut.matches(CacheOperationSourcePointcut.java:39)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:262)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:294)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:118)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:88)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:69)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:330)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	... 12 common frames omitted
+
+2015-03-05 14:36:26.313  INFO 4900 --- [main] spring.Application                       : Starting Application on EPUAKYIW1562 with PID 4900 (C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes started by Sergii_Tsymbaliuk in C:\Users\Sergii_Tsymbaliuk\ws\SpringAll)
+2015-03-05 14:36:26.313 DEBUG 4900 --- [main] spring.Application                       : Running with Spring Boot v1.2.2.RELEASE, Spring v4.1.5.RELEASE
+2015-03-05 14:36:28.403  INFO 4900 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-03-05 14:36:28.403  INFO 4900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2015-03-05 14:36:28.685  INFO 4900 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring embedded WebApplicationContext
+2015-03-05 14:36:28.700  INFO 4900 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2356 ms
+2015-03-05 14:36:31.197  INFO 4900 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2015-03-05 14:36:31.197 ERROR 4900 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personService' defined in file [C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes\spring\person\service\PersonService.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:547)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320)
+	at spring.Application.main(Application.java:40)
+Caused by: java.lang.IllegalStateException: No cache names could be detected on 'public spring.person.Person spring.person.service.PersonService.save(spring.person.Person)'. Make sure to set the value parameter on the annotation or declare a @CacheConfig at the class-level with the default cache name(s) to use.
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.validateCacheOperation(SpringCacheAnnotationParser.java:240)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parsePutAnnotation(SpringCacheAnnotationParser.java:149)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:81)
+	at org.springframework.cache.annotation.SpringCacheAnnotationParser.parseCacheAnnotations(SpringCacheAnnotationParser.java:57)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource$2.getCacheOperations(AnnotationCacheOperationSource.java:124)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.determineCacheOperations(AnnotationCacheOperationSource.java:142)
+	at org.springframework.cache.annotation.AnnotationCacheOperationSource.findCacheOperations(AnnotationCacheOperationSource.java:121)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.computeCacheOperations(AbstractFallbackCacheOperationSource.java:140)
+	at org.springframework.cache.interceptor.AbstractFallbackCacheOperationSource.getCacheOperations(AbstractFallbackCacheOperationSource.java:100)
+	at org.springframework.cache.interceptor.CacheOperationSourcePointcut.matches(CacheOperationSourcePointcut.java:39)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:262)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:294)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:118)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:88)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:69)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:330)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	... 12 common frames omitted
+
+2015-03-05 14:38:04.253  INFO 2108 --- [main] spring.Application                       : Starting Application on EPUAKYIW1562 with PID 2108 (C:\Users\Sergii_Tsymbaliuk\ws\SpringAll\target\classes started by Sergii_Tsymbaliuk in C:\Users\Sergii_Tsymbaliuk\ws\SpringAll)
+2015-03-05 14:38:04.253 DEBUG 2108 --- [main] spring.Application                       : Running with Spring Boot v1.2.2.RELEASE, Spring v4.1.5.RELEASE
+2015-03-05 14:38:06.312  INFO 2108 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-03-05 14:38:06.312  INFO 2108 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.20
+2015-03-05 14:38:06.586  INFO 2108 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring embedded WebApplicationContext
+2015-03-05 14:38:06.586  INFO 2108 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2302 ms
+2015-03-05 14:38:09.238  INFO 2108 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fcd6521: startup date [Thu Mar 05 14:38:04 EET 2015]; root of context hierarchy
+2015-03-05 14:38:09.295  INFO 2108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit || /person/edit],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showEditPersonForm()
+2015-03-05 14:38:09.295  INFO 2108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[ || /list || /person || /person/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showPersonList(org.springframework.ui.Model)
+2015-03-05 14:38:09.296  INFO 2108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/view || /person/view],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showViewForm(org.springframework.ui.Model)
+2015-03-05 14:38:09.296  INFO 2108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add || /person/add],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.showAddform()
+2015-03-05 14:38:09.296  INFO 2108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add || /edit || /person/add || /person/edit],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.savePerson(spring.person.Person)
+2015-03-05 14:38:09.296  INFO 2108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delete || /person/delete],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonController.deletePerson(spring.person.Person)
+2015-03-05 14:38:09.297  INFO 2108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ws/person/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String spring.person.web.PersonRestController.showViewForm(spring.person.Person,org.springframework.ui.Model)
+2015-03-05 14:38:09.297  INFO 2108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-03-05 14:38:09.298  INFO 2108 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2015-03-05 14:38:09.330  INFO 2108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-03-05 14:38:09.330  INFO 2108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-03-05 14:38:09.368  INFO 2108 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-03-05 14:38:09.786  INFO 2108 --- [main] spring.Application                       : Started Application in 5.751 seconds (JVM running for 6.06)
+2015-03-05 14:38:28.271  INFO 2108 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/SpringAll]     : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2015-03-05 14:38:28.271  INFO 2108 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2015-03-05 14:38:28.303  INFO 2108 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms

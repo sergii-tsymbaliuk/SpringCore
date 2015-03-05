@@ -4,6 +4,9 @@ import java.util.Date;
 
 import javax.annotation.Resource;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.security.access.annotation.Secured;
@@ -21,17 +24,23 @@ public class PersonService {
 	@Resource
 	PersonDao personDao;
 
+	@CachePut(value="persons",key="#p.id")
 	@Transactional
-	public <S extends Person> S save(S entity) {
-		if (entity.getCreateDate() == null) 
-			entity.setCreateDate(new Date());
-		return personDao.save(entity);
+	@Secured("ROLE_ADMIN")
+	public Person save(Person p) {
+		if (p.getCreateDate() == null) 
+			p.setCreateDate(new Date());
+		return personDao.save(p);
 	}
 
-	public <S extends Person> Iterable<S> save(Iterable<S> entities) {
-		return personDao.save(entities);
-	}
+//	
+//	@Transactional
+//	@Secured("ROLE_ADMIN")
+//	public <S extends Person> Iterable<S> save(Iterable<S> entities) {
+//		return personDao.save(entities);
+//	}
 
+	@Cacheable("persons")
 	public Person findOne(Long id) throws Exception{
 		if (id <=0 ){
 			throw new Exception("id must be > 0");
@@ -42,11 +51,13 @@ public class PersonService {
 	public boolean exists(Long id) {
 		return personDao.exists(id);
 	}
-
+	
+	//@Cacheable("persons")
 	public Iterable<Person> findAll() {
 		return personDao.findAll();
 	}
 
+	//@Cacheable("persons")
 	public Iterable<Person> findAll(Iterable<Long> ids) {
 		return personDao.findAll(ids);
 	}
@@ -61,12 +72,14 @@ public class PersonService {
 		personDao.delete(id);
 	}
 
+	@CacheEvict(value = "persons", key = "#id")
 	@Transactional
 	@Secured(value = { "ROLE_ADMIN" })
 	public void delete(Person entity) {
 		personDao.delete(entity);
 	}
 
+	@CacheEvict(value = "persons", key = "#id")
 	@Transactional
 	@Secured(value = { "ROLE_ADMIN" })	
 	public void delete(Iterable<? extends Person> entities) {
@@ -84,5 +97,4 @@ public class PersonService {
 		System.out.println("new PersonService() ");
 	}
 
-	
 }

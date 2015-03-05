@@ -25,9 +25,9 @@ public class ScheduledTask {
 		this.message = message;
 	}
 
-	//	@Scheduled(fixedRate = 1000) // Fixed rate
+//	@Scheduled(fixedRate = 1000) // Fixed rate
 //	@Scheduled(fixedDelay = 1000) // Fixed delay between tasks
-	@Scheduled(fixedDelay = 5000, initialDelay= 7000) 	// Run on fixed delay after prog started
+//	@Scheduled(fixedDelay = 5000, initialDelay= 7000) 	// Run on fixed delay after prog started
 //	@Scheduled(cron="0/5 * * * * MON-FRI", zone="GMT+2") 	// cron-like config, zone for the timezone
 	public void job() {
 		log.info("Start Job");

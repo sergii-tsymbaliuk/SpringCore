@@ -33,22 +33,6 @@ public class PersonController extends PersonAbstractController {
 //		@Secured("ROLE_USER")
 		@RequestMapping({"","list"})
 		public String showPersonList(Model model){
-//			System.out.println("PC: "+ this);			
-//			System.out.println("PC.class: "+ this.getClass());			
-//			System.out.println("Service= "+ service);
-//			System.out.println("Service.class = "+ service.getClass());
-			System.out.println("Befor async");
-//			scheduledTask.doAsyncTask();
-			System.out.println("Get async result");			
-			Future<String> asresult = scheduledTask.getAsyncResult();
-			try {
-				System.out.println("async result = " + asresult.get() );
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			} catch (ExecutionException e) {
-				e.printStackTrace();
-			}			
-			System.out.println("After async");			
 			model.addAttribute("personList", service.findAll());
 			return "person/list";
 		}
