@@ -1,21 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository-1.7.xsd">
 
-<!-- 1 - classic beans 
-	<bean id = "personDao" class="spring.person.dao.PersonDaoImpl"> </bean>
-	<bean id = "personService" class="spring.person.service.PersonServiceImpl">
-		<!-- <property name="personDao" ref="personDao"></property> -- >
-		<constructor-arg index="0" ref="personDao"></constructor-arg>
-	</bean>	
--->	
-<!-- 2 alternative - hidden unnamed bean-->
-<!---->
-	<bean id = "personService" class="spring.person.service.PersonServiceImpl">
-		<constructor>
-			<bean class="spring.person.dao.PersonDaoImpl"> </bean>		
-		</constructor>
-	</bean>	
- 	
+	<!-- <context:property-placeholder location="app.prop"/>-->
+	<import resource="securityContext.xml"/>
+	<jpa:repositories base-package="spring"/>	
+	<context:component-scan base-package="spring"/>	
+	<context:annotation-config />
+	<!-- Turn on AOP -->
+	<aop:aspectj-autoproxy/>
+
+	<tx:annotation-driven/>
+	
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<bean id="entityManagerFactory"
+			class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" >
+			
+		<property name="persistenceUnitName" value="jpa" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+		<property name="jpaPropertyMap">
+			<map>
+				<entry key="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+				<entry key="hibernate.hbm2ddl.auto" value="update" />
+				<entry key="hibernate.show_sql" value="true" />
+				<entry key="hibernate.format_sql" value="true" />
+			</map>
+		</property>
+	</bean>
+	
+	<!-- moved from persistence -->			
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/jpa" />
+		<property name="username" value="root" />
+		<property name="password" value="pass" />
+	</bean>
+	
+	<bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+	    <property name="scopes">
+	        <map>
+	            <entry key="request">
+	                <bean class="org.springframework.context.support.SimpleThreadScope"/>
+	            </entry>
+	        </map>
+	    </property>
+	</bean>
+	
+		
+<!-- 	<aop:config> -->
+<!-- 		<aop:advisor pointcut="spring.common.TransactionConfig.serviceLayer()" -->
+<!-- 			advice-ref="tx-advice" /> -->
+<!-- 	</aop:config> -->
+
+<!-- 	<tx:advice id="tx-advice"> -->
+<!-- 		<tx:attributes> -->
+<!-- 			<tx:method name="save*"/>			 -->
+<!-- 		</tx:attributes> -->
+<!-- 	</tx:advice>	 -->
+	
 </beans>
